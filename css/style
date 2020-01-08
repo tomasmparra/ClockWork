@@ -50,6 +50,7 @@ FIN DE MAPA DE CONTENIDOS */
   --color1: #8FBE00;
   --color2: #E5E5E5;
   --color3: #696969;
+  --color4: black;
 
 
   /* SIZES */
