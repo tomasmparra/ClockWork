@@ -180,3 +180,18 @@ FIN DE MAPA DE CONTENIDOS */
                               6) =COMPONENTES:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
+
+.textMainColor {
+  color: var(--color1);
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+}
+
+.singleFeature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
