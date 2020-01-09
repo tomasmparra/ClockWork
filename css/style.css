@@ -288,6 +288,7 @@ FIN DE MAPA DE CONTENIDOS */
 .features1 {
   margin: auto;
   width: 67%;
+  margin-bottom: 3rem;
 }
 
 .featureIcon1 {
@@ -303,5 +304,8 @@ FIN DE MAPA DE CONTENIDOS */
 
 .metodologias {
   background-image: url('../img/barcelona.jpg');
-  background-color: var(--color1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 330px;
+  position: relative;
 }
