@@ -59,6 +59,8 @@ FIN DE MAPA DE CONTENIDOS */
   --sizeRa: 16; --sizeRb: 20; --sizeRc: 20; --sizeRd:24;
   --sizeR: calc(var(--sizeRa) * 1px);
 
+}
+
   /* ---------------------------------------------------------------------------
   ------------------------------------------------------------------------------
       1.2) =Variables de cambio visual relacionado a al ancho de la pantalla
@@ -78,7 +80,7 @@ FIN DE MAPA DE CONTENIDOS */
                           2.1) min-width:  =360px
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
-@media     screen and (min-width: 360px)  {
+@media screen and (min-width: 360px)  {
   :root {
   --sizeR: calc(calc(var(--sizeRa) * 1px) + (var(--sizeRb) - var(--sizeRa)) * ((100vw - 360px) / (768 - 360)));
   }
@@ -160,6 +162,7 @@ FIN DE MAPA DE CONTENIDOS */
 :root{font-size:var(--sizeR)}
 *{
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding:0;
   z-index:3;
@@ -172,6 +175,24 @@ FIN DE MAPA DE CONTENIDOS */
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
 
+.ATF {
+  border-bottom: var(--color1) 2px solid;
+  background-image: url("../img/atfBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 550px;
+  width: 100%;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+
 
 
 
@@ -181,6 +202,49 @@ FIN DE MAPA DE CONTENIDOS */
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
 
+
+/*ATF*/
+
+.copyContainer {
+  display: grid;
+  grid-template-columns: min-content auto;
+  height: max-content;
+  margin: 150px auto auto 150px;
+  width: max-content;
+}
+
+.copyAndCTA {
+  padding: 0 calc(var(--sE) * 1px);
+}
+
+.copy {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 120%;
+}
+
+.copyMainColor {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.iconoReloj {
+  height: 90px;
+  margin-top: calc(var(--sE) * 1px);
+  width: 90px;
+}
+
+.ButtonCTA {
+  background: none;
+  border: solid 1px black;
+  font-size: .7rem;
+  font-weight: 300;
+  margin: auto;
+  margin: 15px 10px;
+  padding: .2rem;
+}
+
+
 .textMainColor {
   color: var(--color1);
 }
@@ -188,10 +252,56 @@ FIN DE MAPA DE CONTENIDOS */
 .features {
   display: flex;
   justify-content: space-between;
+  font-size: .6rem;
 }
 
 .singleFeature {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: min-content;
+}
+
+.featureIcon {
+  margin: auto;
+  margin-bottom: calc(var(--sE) * .5px);
+  margin-top: 0;
+}
+
+/*Section 1*/
+
+.nuestraSolucion {
+  margin-top: calc(var(--sE) * 1.5px);
+  margin-bottom: calc(var(--sE) * .5px);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.section1Txt {
+  font-size: .75rem;
+  font-weight: 300;
+  width: 60%;
+  margin: auto;
+  margin-bottom: calc(var(--sE) * 2px);
+}
+
+.features1 {
+  margin: auto;
+  width: 67%;
+}
+
+.featureIcon1 {
+  width: 90px;
+  height: 90px;
+}
+
+/*Section 2*/
+
+.section2 {
+  position: relative;
+}
+
+.metodologias {
+  background-image: url('../img/barcelona.jpg');
+  background-color: var(--color1);
 }
