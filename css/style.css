@@ -50,7 +50,8 @@ FIN DE MAPA DE CONTENIDOS */
   --color1: #77BF00;
   --color2: #E6E6E6;
   --color3: #696969;
-  --color4: black;
+  --color4: #616161;
+
 
 
   /* SIZES */
@@ -244,6 +245,14 @@ FIN DE MAPA DE CONTENIDOS */
   margin: auto;
   margin: 15px 10px;
   padding: .2rem .3rem;
+  transition: .25s;
+  text-decoration: none;
+  color: black;
+}
+
+.ButtonCTA:hover {
+  color: white;
+  background: black;
 }
 
 
@@ -557,6 +566,8 @@ FIN DE MAPA DE CONTENIDOS */
   font-weight: 300;
   font-size: .7rem;
   margin-left: 4rem;
+  text-decoration: none;
+  transition: .25s;
 }
 
 .CTAIcon {
@@ -565,16 +576,28 @@ FIN DE MAPA DE CONTENIDOS */
   height: 40px;
 
 }
-.descargarCTA2{
+.descargarCTA2 {
   margin-top: 5rem;
 }
 
+.descargarCTA2:hover {
+  margin-top: 5rem;
+  /* color: black; */
+  background: black;
+  border: 1px solid white;
+}
+
 .masInfoCTA2{
-  background: #616161;
+  background: var(--color4);
   margin-top: .5rem;
 }
 
-
+.masInfoCTA2:hover{
+  background: black;
+  margin-top: .5rem;
+  /* color: black; */
+  border: 1px solid white;
+}
 
 /* footer */
 
