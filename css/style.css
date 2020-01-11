@@ -47,8 +47,8 @@ FIN DE MAPA DE CONTENIDOS */
   /* COLORS */
   /* Al editar colores siempre usar HEX y nunca
   dejar espacio entre los dos puntos y el color */
-  --color1: #8FBE00;
-  --color2: #E5E5E5;
+  --color1: #77BF00;
+  --color2: #E6E6E6;
   --color3: #696969;
   --color4: black;
 
@@ -160,13 +160,15 @@ FIN DE MAPA DE CONTENIDOS */
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
 :root{font-size:var(--sizeR)}
-*{
+* {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding:0;
   z-index:3;
 }
+
+
 
 
 /* ---------------------------------------------------------------------------
@@ -241,7 +243,7 @@ FIN DE MAPA DE CONTENIDOS */
   font-weight: 300;
   margin: auto;
   margin: 15px 10px;
-  padding: .2rem;
+  padding: .2rem .3rem;
 }
 
 
@@ -251,7 +253,6 @@ FIN DE MAPA DE CONTENIDOS */
 
 .features {
   display: flex;
-  justify-content: space-around;
   font-size: .6rem;
 }
 
@@ -287,8 +288,9 @@ FIN DE MAPA DE CONTENIDOS */
 
 .features1 {
   margin: auto;
-  width: 67%;
+  width: 75%;
   margin-bottom: 3rem;
+  justify-content: space-around;
 }
 
 .featureIcon1 {
@@ -300,30 +302,37 @@ FIN DE MAPA DE CONTENIDOS */
 
 .section2 {
   position: relative;
-
 }
 
 .metodologias {
   background-image: url('../img/barcelonaVerde.png');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 330px;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: 230px;
+  justify-content: space-around;
+  align-items: center;
   position: relative;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  /* margin-left: 5rem;
+  margin-right: 5rem; */
   z-index: 1;
-
-  /*rafa-position: presta-atencion;*/
+  padding:0 6rem 1rem 6rem;
 }
 
-.h4Metodologias{
+.metodologiasTitle {
   color: white;
   text-align: center;
-  padding-top:  1.5rem;
-  padding-bottom:  1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  /* padding-top:  1.5rem;
+  padding-bottom:  1.5rem; */
+  width: 100%;
+  margin-top: .5rem;
 }
 
-.metodologiasLista{
+/* .metodologiasLista{
   position: relative;
   display: flex;
   flex-direction: row;
@@ -331,7 +340,7 @@ FIN DE MAPA DE CONTENIDOS */
   padding-left: 7rem;
   padding-right: 7rem;
   align-items: center;
-}
+} */
 
 .numberMetodologia{
   text-align: center;
@@ -344,43 +353,85 @@ FIN DE MAPA DE CONTENIDOS */
 
 .descriptionMetodologia{
   color: white;
+  font-weight: 300;
 }
 
 .metodologiasArrow{
-  height: 5rem;
+  height: 4rem;
 }
 
 
 .imgMovil{
-  position: relative;
-  margin-top: -2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* margin-top: -2rem; */
   z-index: 5;
-  grid-row: 1/4;
-  grid-column: 1;
+  /* grid-row: 1/4; */
+  /* grid-column: 1; */
 }
 
 .polivalenciaFlex{
-  margin-left: 5rem;
-  margin-right: 5rem;
-  display: grid;
-  grid-template-columns: min-content 1fr;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  /* margin-left: 5rem;
+  margin-right: 5rem; */
+  /* display: grid;
+  grid-template-columns: min-content 1fr; */
   /*grid-template-rows: min-content;*/
 
 }
 
-.polivalencia{
-  height: 5rem;
-  margin-top: 2rem;
+.polivalencia {
+  /* margin-top: 2rem; */
+  align-self: flex-end;
+  width: 60%;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: .5rem;
 }
 
-.features{
-  justify-content:flex-start;
+.polivalencia .textMainColor {
+  font-weight: 700;
 }
 
-.singleFeature{
+
+.features2 {
+  align-self: flex-end;
+  width: 60%;
+  justify-content: space-between;
+  padding-right: 7rem;
+  padding-bottom: 1rem;
+}
+
+/* .singleFeature2 {
+  height: 100%;
+} */
+
+
+.singleFeature2 {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+
+
+.featureIcon2 {
+  height: auto;
+  align-self: flex-end;
+  margin-bottom: calc(var(--sE) * 1.5px);
+}
+
+/* .singleFeature{
   justify-content: center;
   margin-right: 1rem;
   margin-left: 1rem;
+} */
+
+.featureCaption2 {
+  font-weight: 300;
 }
 
 .featureText{
@@ -389,21 +440,193 @@ FIN DE MAPA DE CONTENIDOS */
 
 .section2CTA{
   background: var(--color1);
-  grid-column: 1 / span 2;
-  grid-row: 3;
-  height: 2rem;
+  /* grid-column: 1 / span 2;
+  grid-row: 3; */
+  height: 100px;
   /* display: grid;
   grid-template-columns: min-content 1fr; */
 
 }
 
-/* .buttonsPolivalencia{
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-} */
-
-.masInfoCTA{
+.buttonsPolivalencia{
+  display: flex;
+  justify-content: flex-end;
 }
 
-.descargarCTA{
+.buttonsPolivalencia .ButtonCTA {
+  align-self: flex-end;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-color: white;
+  color: white;
+}
+
+.buttonsPolivalencia .ButtonCTA:nth-child(2) {
+  margin-right: 18rem;
+}
+
+/* Section 3 */
+
+.section3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 400px;
+  grid-gap: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.section3Element {
+  padding: 1rem 3rem;
+  background: var(--color2);
+}
+
+.section3Title {
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+.section3Title .textMainColor {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.section3Text {
+  font-size: .7rem;
+  font-weight: 300;
+  margin-bottom: .5rem;
+  line-break: strict!important;
+  white-space: normal;
+}
+
+.section4 {
+  padding-top: 50px;
+  background: white;
+  position: relative;
+  z-index: 10;
+  /* margin-top: -100px; */
+  height: 800px;
+  display: grid;
+  /* background-image: url("../img/MoveManager.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-attachment: fixed; */
+}
+
+.moveManagerImg {
+  height: 1080px;
+  grid-column: 1;
+  grid-row: 1;
+  margin: auto;
+  margin-right: 0;
+  margin-top: -80px;
+  margin-right: 4rem;
+
+}
+
+.section4Left {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.section4Title {
+  margin: auto;
+  margin-left: 4rem;
+  width: max-content;
+}
+
+.section4Title h4 {
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+.section4Title h5 {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+}
+
+
+.ButtonCTA2 {
+  display: flex;
+  align-items: center;
+  padding: .5rem;
+  background: var(--color1);
+  border: none;
+  height: max-content;
+  width: 240px;
+  color: white;
+  font-weight: 300;
+  font-size: .7rem;
+  margin-left: 4rem;
+}
+
+.CTAIcon {
+  margin-right: .5rem;
+  align-self: flex-start;
+  height: 40px;
+
+}
+.descargarCTA2{
+  margin-top: 5rem;
+}
+
+.masInfoCTA2{
+  background: #616161;
+  margin-top: .5rem;
+}
+
+
+
+/* footer */
+
+.footer {
+  margin-top: 6.5rem;
+  background: var(--color1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 270px;
+}
+
+.footerElement {
+  margin: auto;
+  color: white;
+  font-weight: 300;
+}
+
+.footerLeft {
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+}
+
+.smallTxt {
+  font-size: .6rem;
+}
+
+.numeroTelefono {
+font-size: .8rem;
+}
+
+.eMail {
+font-size: .7rem;
+margin-bottom: 1rem;
+}
+
+.firmaDiseniador {
+  opacity: .6;
+}
+
+.footerRight {
+  display: grid;
+  grid-template-columns: min-content max-content;
+  grid-gap: .5rem;
+  margin: auto;
+  margin-bottom: 2rem;
+
+}
+
+.logoFooter {
+  height: 80px;
+}
+
+.footerRightText {
+  font-size: .6rem;
 }
