@@ -626,6 +626,52 @@ FIN DE MAPA DE CONTENIDOS */
   z-index: -1;
 }
 
+.moveManagerPantallas {
+  /* height: var(--moveManagerImgHeight); */
+  grid-column: 1;
+  grid-row: 1;
+  margin: auto;
+  margin-bottom: 0;
+  /* margin-top: -80px; */
+  /* margin-right: var(--moveManagerImgMarginRight); */
+  /* position: relative; */
+  /* z-index: -1; */
+  /* max-width: 500px; */
+}
+.moveManagerImg1{
+  margin-top:-80px;
+  margin-right:7.2%;
+  width: 29.3%;
+}
+.moveManagerImg2{
+  margin-top:65px;
+  margin-right:28.5%;
+  width: 24.9%;
+}
+.moveManagerImg3{
+  /* margin-top:232px; */
+  margin-top:172px;
+  margin-right:11%;
+  width: 21%;
+}
+.moveManagerImg4{
+  /* margin-top:415px; */
+  margin-top:215px;
+  margin-right:42.5%;
+  width: 19%;
+}
+.moveManagerImg5{
+  /* margin-top:335px; */
+  margin-top:265px;
+  margin-right:9%;
+  width: 57%;
+}
+
+
+
+
+
+
 .section4Left {
   grid-column: 1;
   grid-row: 1;
