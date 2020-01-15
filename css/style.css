@@ -75,6 +75,8 @@ FIN DE MAPA DE CONTENIDOS */
   --imgMovilWidth: auto;
   --imgMovilObjectFit: auto;
   --imgMovilMargin: auto auto 0 auto;
+  --features2JustifyContent: space-between;
+  --featur2Margin: auto;
 }
 
   /* ---------------------------------------------------------------------------
@@ -99,6 +101,8 @@ FIN DE MAPA DE CONTENIDOS */
 @media screen and (min-width: 360px)  {
   :root {
   --sizeR: calc(calc(var(--sizeRa) * 1px) + (var(--sizeRb) - var(--sizeRa)) * ((100vw - 360px) / (768 - 360)));
+  --moveManagerImgHeight: 300px;
+  --imgMovilWidth: 100%;
   }
 }
 
@@ -109,6 +113,15 @@ FIN DE MAPA DE CONTENIDOS */
 --------------------------------------------------------------------------- */
 @media screen and (min-width: 576px) {
   :root {
+    --moveManagerImgHeight: 450px;
+    --imgMovilWidth: 100%;
+    --metodologiasPadding: 0 1rem 2rem 1rem;
+    /* --features2AlignSelf: center; */
+    /* --features2JustifyContent: center; */
+    --features2JustifyContent: space-evenly;
+    --features2Width: 100%;
+    /* --footerHeight: 100px; */
+    /* --footerMarginTop: 4.5rem; */
 
   }
 }
@@ -504,7 +517,8 @@ FIN DE MAPA DE CONTENIDOS */
 .features2 {
   align-self: var(--features2AlignSelf);
   width: var(--features2Width);
-  justify-content: space-between;
+  justify-content: space-evenly; /*var(features2JustifyContent);*/
+  align-items: center;
   padding: var(--features2Padding);
   flex-wrap: wrap;
 }
@@ -697,11 +711,12 @@ FIN DE MAPA DE CONTENIDOS */
 /* footer */
 
 .footer {
-  margin-top: 6.5rem;
+  margin-top: var(--footerMarginTop);
   background: var(--color1);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr min-content;
   height: var(--footerHeight);
+
 }
 
 .footerElement {
@@ -734,7 +749,7 @@ margin-bottom: 1rem;
 
 .footerRight {
   display: grid;
-  grid-template-columns: min-content max-content;
+  grid-template-columns: min-content min-content;
   grid-gap: .5rem;
   margin: auto;
   margin-bottom: 2rem;
@@ -747,4 +762,6 @@ margin-bottom: 1rem;
 
 .footerRightText {
   font-size: .6rem;
+  white-space: nowrap;
+
 }
