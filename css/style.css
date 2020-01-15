@@ -118,6 +118,11 @@ FIN DE MAPA DE CONTENIDOS */
   --footerGridTemplateRows: min-content min-content;
   --footerRightGridTemplateColumns: 1fr;
   --footerRightGridTemplateRows: min-content min-content;
+  --footerPadding: 1.5rem;
+  --footerRightGridGap: 1.5rem;
+  --footerRightMargin: 0;
+  --footerRightPadding: 0;
+  --footerGridGap: 1.5rem;
 }
 
   /* ---------------------------------------------------------------------------
@@ -240,6 +245,12 @@ FIN DE MAPA DE CONTENIDOS */
     --footerGridTemplateRows: 1fr;
     --footerRightGridTemplateColumns: min-content min-content;
     --footerRightGridTemplateRows: 1fr;
+    --footerPadding: 0;
+    --footerLeftMarginLeft: .5rem;
+    --footerRightGridGap: .5rem;
+    --footerRightMargin: auto;
+    --footerRightPadding: 0 1rem;
+    --footerGridGap: ;
   }
 }
 
@@ -894,6 +905,9 @@ FIN DE MAPA DE CONTENIDOS */
   grid-template-columns: var(--footerGridTemplateColumns);
   grid-template-rows: var(--footerGridTemplateRows);
   height: var(--footerHeight);
+  padding: var(--footerPadding);
+  grid-gap: var(--footerGridGap);
+
 
 }
 
@@ -904,8 +918,7 @@ FIN DE MAPA DE CONTENIDOS */
 }
 
 .footerLeft {
-  margin-left: 4rem;
-  margin-bottom: 1rem;
+  margin-left: var(--footerLeftMarginLeft);
 }
 
 .smallTxt {
@@ -929,10 +942,9 @@ margin-bottom: 1rem;
   display: grid;
   grid-template-columns: var(--footerRightGridTemplateColumns);
   grid-template-rows: var(--footerRightGridTemplateRows);
-  grid-gap: .5rem;
-  margin: auto;
-  margin-bottom: 2rem;
-  padding:0 1rem;
+  grid-gap: var(--footerRightGridGap);
+  margin: var(--footerRightMargin);
+  padding: var(--footerRightPadding);
 }
 
 .logoFooter {
