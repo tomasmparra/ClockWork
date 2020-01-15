@@ -81,12 +81,25 @@ FIN DE MAPA DE CONTENIDOS */
   --features2FlexWrap:wrap;
 
   /* ATF */
-  --copyContainerMargin:auto;
+  --copyContainerMargin: auto;
 
 
   /* METODOLOGIAS */
-  --metodologiasArrowDisplay:none;
-  --metodologiasDirection:column;
+  --metodologiasPadding: 0 1rem 2rem 1rem;
+  --metodologiasDirection: column;
+  --metodologiasArrowTransform: rotate(90deg);
+  --descriptionMetodologiaDisplay : flex;
+  --metodologiasTitleFontSize: 2rem;
+  --metodologiasTitleMarginBottom: 2rem;
+  --stepsFontSize: 1.3rem;
+  --imgMovilDisplay: block;
+  --buttonsPolivalenciaFontSize: 1.1rem;
+
+  /* SECTION 3 */
+  --section3GridTemplateColumns: 1fr;
+  --section3GridTemplateRows: 1fr 1fr;
+
+
 
   /* SECTION 4 */
   --section4TitleTextAlign: center;
@@ -99,6 +112,12 @@ FIN DE MAPA DE CONTENIDOS */
 
   --parallaxContainerWidth: 300px;
   --parallaxContainerHeigth: auto;
+
+  /* FOOTER */
+  --footerGridTemplateColumns: 1fr;
+  --footerGridTemplateRows: min-content min-content;
+  --footerRightGridTemplateColumns: 1fr;
+  --footerRightGridTemplateRows: min-content min-content;
 }
 
   /* ---------------------------------------------------------------------------
@@ -138,15 +157,13 @@ FIN DE MAPA DE CONTENIDOS */
   :root {
     --moveManagerImgHeight: 450px;
     --imgMovilWidth: 100%;
-    --metodologiasPadding: 0 1rem 2rem 1rem;
     --features2JustifyContent: space-evenly;
     --features2Width: 100%;
 
     /* ATF */
-    --copyContainerMargin:150px auto auto 150px;
 
     /* METODOLOGIAS */
-    --metodologiasDirection:row;
+
 
     /* SECTION 4 */
     --section4TitleTextAlign: left;
@@ -159,6 +176,16 @@ FIN DE MAPA DE CONTENIDOS */
   }
 }
 
+@media screen and (min-width: 650px) {
+  :root {
+
+    /* METODOLOGIAS */
+    --imgMovilDisplay: none;
+  }
+}
+
+
+
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
                           2.1) min-width:  =768px
@@ -166,7 +193,7 @@ FIN DE MAPA DE CONTENIDOS */
 --------------------------------------------------------------------------- */
 @media screen and (min-width: 768px) {
   :root {
-
+    --copyContainerMargin:150px auto auto 150px;
     --moveManagerImgHeight: 500px;
     --section4Height: 300px;
     --descargarCTA2MarginTop: 3rem;
@@ -180,11 +207,23 @@ FIN DE MAPA DE CONTENIDOS */
     --singleFeature2Width: 50%;
     --features2Padding: 1rem;
 
+    /* METODOLOGIAS */
+    --metodologiasDirection: row;
+    --metodologiasArrowTransform: rotate(0deg);
+    --descriptionMetodologiaDisplay : block;
+    --metodologiasTitleFontSize: 1rem;
+    --metodologiasTitleMarginBottom: 0;
+    --stepsFontSize: 1rem;
+    --buttonsPolivalenciaFontSize: ;
+
 
     /* METODOLOGIAS */
-    --metodologiasArrowDisplay:static;
+    --imgMovilDisplay: block;
 
 
+    /* SECTION 3 */
+  --section3GridTemplateColumns: 1fr 1fr;
+  --section3GridTemplateRows: 1fr;
 
 
     /* PARALLAX BEHAVIOUR */
@@ -194,6 +233,13 @@ FIN DE MAPA DE CONTENIDOS */
     --parallaxContainerHeigth: 550px;
 
     --section4Height:calc(var(--parallaxContainerHeigth) - 70px);
+
+
+    /* FOOTER */
+    --footerGridTemplateColumns: 1fr min-content;
+    --footerGridTemplateRows: 1fr;
+    --footerRightGridTemplateColumns: min-content min-content;
+    --footerRightGridTemplateRows: 1fr;
   }
 }
 
@@ -288,7 +334,6 @@ FIN DE MAPA DE CONTENIDOS */
     /* PARALLAX BEHAVIOUR */
     --parallaxContainerWidth: 1500px;
     --parallaxContainerHeigth: 800px;
-
   }
 }
 
@@ -482,10 +527,10 @@ FIN DE MAPA DE CONTENIDOS */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   display: flex;
   flex-direction:var(--metodologiasDirection);
   flex-wrap: wrap;
-  height: 230px;
   justify-content: space-around;
   align-items: center;
   position: relative;
@@ -501,6 +546,8 @@ FIN DE MAPA DE CONTENIDOS */
   letter-spacing: 1px;
   width: 100%;
   margin-top: .5rem;
+  font-size:var(--metodologiasTitleFontSize);
+  margin-bottom: var(--metodologiasTitleMarginBottom);
 }
 
 
@@ -513,15 +560,23 @@ FIN DE MAPA DE CONTENIDOS */
   color: var(--color1);
 }
 
+.steps {
+  font-size: var(--stepsFontSize);
+}
+
 .descriptionMetodologia{
   color: white;
   font-weight: 300;
+  display: var(--descriptionMetodologiaDisplay);
+  flex-direction: column;
+  align-items: center;
 }
 
 .metodologiasArrow{
   display:var(--metodologiasArrowDisplay);
   height: 4rem;
   padding:0 .8rem;
+  transform: var(--metodologiasArrowTransform);
 }
 
 
@@ -533,6 +588,7 @@ FIN DE MAPA DE CONTENIDOS */
   width: var(--imgMovilWidth);
   object-fit: var(--imgMovilObjectFit);
   margin: var(--imgMovilMargin);
+  display: var(--imgMovilDisplay);
 }
 
 .polivalenciaFlex{
@@ -601,6 +657,11 @@ FIN DE MAPA DE CONTENIDOS */
   display: flex;
   justify-content: var(--buttonsPolivalenciaJustifyContent);
   width: 100%;
+  background-image: url(../img/barcelonaVerde.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .buttonsPolivalencia .ButtonCTA {
@@ -609,6 +670,7 @@ FIN DE MAPA DE CONTENIDOS */
   margin-bottom: auto;
   border-color: white;
   color: white;
+  font-size: var(--buttonsPolivalenciaFontSize);
 }
 
 .buttonsPolivalencia .ButtonCTA:nth-child(2) {
@@ -619,7 +681,8 @@ FIN DE MAPA DE CONTENIDOS */
 
 .section3 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: var(--section3GridTemplateColumns);
+  grid-template-rows: var(--section3GridTemplateRows);
   height: var(--section3Height);
   grid-gap: 15px;
   text-align: center;
@@ -828,7 +891,8 @@ FIN DE MAPA DE CONTENIDOS */
   margin-top: var(--footerMarginTop);
   background: var(--color1);
   display: grid;
-  grid-template-columns: 1fr min-content;
+  grid-template-columns: var(--footerGridTemplateColumns);
+  grid-template-rows: var(--footerGridTemplateRows);
   height: var(--footerHeight);
 
 }
@@ -863,7 +927,8 @@ margin-bottom: 1rem;
 
 .footerRight {
   display: grid;
-  grid-template-columns: min-content min-content;
+  grid-template-columns: var(--footerRightGridTemplateColumns);
+  grid-template-rows: var(--footerRightGridTemplateRows);
   grid-gap: .5rem;
   margin: auto;
   margin-bottom: 2rem;
