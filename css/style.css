@@ -62,25 +62,43 @@ FIN DE MAPA DE CONTENIDOS */
 
 
 
-  --section4TitleBackground: rgba(255,255,255,.5);
   --section3ElementPadding: .5rem;
   --section2FlexDirection: column;
   --section2Wrap: nowrap;
   --buttonsPolivalenciaJustifyContent: center;
   --polivalenciaWidth: 100%;
   --polivalenciaFlexHeight: min-content;
-  --features2AlignSelf: ;
-  --features2Width: 100%;
   --polivalenciaTextAlign: center;
   --imgMovilWidth: auto;
   --imgMovilObjectFit: auto;
   --imgMovilMargin: auto auto 0 auto;
+
+  /* FEATURES 2 */
   --features2JustifyContent: space-between;
-  --featur2Margin: auto;
+  --features2AlignSelf: ;
+  --features2Width: 100%;
+  --features2Padding: 2rem;
+  --features2FlexWrap:wrap;
+
+  /* ATF */
+  --copyContainerMargin:auto;
+
+
+  /* METODOLOGIAS */
+  --metodologiasArrowDisplay:none;
+  --metodologiasDirection:column;
+
+  /* SECTION 4 */
+  --section4TitleTextAlign: center;
+  --section4TitleBackground: rgba(255,255,255,.5);
 
   /* PARALLAX BEHAVIOUR */
 
+  --section4Height:min-content;
+  --parallaxContainerGR:2;
 
+  --parallaxContainerWidth: 300px;
+  --parallaxContainerHeigth: auto;
 }
 
   /* ---------------------------------------------------------------------------
@@ -108,8 +126,6 @@ FIN DE MAPA DE CONTENIDOS */
   --moveManagerImgHeight: 300px;
   --imgMovilWidth: 100%;
 
-  --parallaxContainerWidth: 300px;
-  --parallaxContainerHeigth: 100px;
   }
 }
 
@@ -126,8 +142,19 @@ FIN DE MAPA DE CONTENIDOS */
     --features2JustifyContent: space-evenly;
     --features2Width: 100%;
 
-    --parallaxContainerWidth: 500px;
-    --parallaxContainerHeigth: 200px;
+    /* ATF */
+    --copyContainerMargin:150px auto auto 150px;
+
+    /* METODOLOGIAS */
+    --metodologiasDirection:row;
+
+    /* SECTION 4 */
+    --section4TitleTextAlign: left;
+
+    /* PARALLAX BEHAVIOUR */
+    --parallaxContainerWidth: 460px;
+    --parallaxContainerHeigth: 450px;
+    /* --section4Height:calc(var(--parallaxContainerHeigth) - 70px); */
 
   }
 }
@@ -153,8 +180,20 @@ FIN DE MAPA DE CONTENIDOS */
     --singleFeature2Width: 50%;
     --features2Padding: 1rem;
 
+
+    /* METODOLOGIAS */
+    --metodologiasArrowDisplay:static;
+
+
+
+
+    /* PARALLAX BEHAVIOUR */
+
+    --parallaxContainerGR:1;
     --parallaxContainerWidth: 650px;
-    --parallaxContainerHeigth: 300px;
+    --parallaxContainerHeigth: 550px;
+
+    --section4Height:calc(var(--parallaxContainerHeigth) - 70px);
   }
 }
 
@@ -183,17 +222,20 @@ FIN DE MAPA DE CONTENIDOS */
     --imgMovilWidth: auto;
     --polivalenciaFlexWidth: auto;
     --buttonsPolivalenciaJustifyContent: flex-end;
-    --polivalenciaWidth: 60%;
-    --features2AlignSelf: flex-end;
+    --polivalenciaWidth: 55%;
     --polivalenciaFlexHeight: 320px;
+    --features2AlignSelf: flex-end;
+    --features2FlexWrap:nowrap;
     --features2Width: 60%;
     --singleFeature2Width: auto;
     --imgMovilWidth: auto;
     --imgMovilObjectFit: auto;
     --imgMovilMargin: auto;
 
+    /* PARALLAX BEHAVIOUR */
     --parallaxContainerWidth: 900px;
     --parallaxContainerHeigth: 600px;
+    --section4Height:calc(var(--parallaxContainerHeigth) - 70px);
   }
 }
 
@@ -215,6 +257,7 @@ FIN DE MAPA DE CONTENIDOS */
     --section4Height: 600px;
     --metodologiasPadding: 0 6rem 1rem 6rem;
 
+    /* PARALLAX BEHAVIOUR */
     --parallaxContainerWidth: 1100px;
     --parallaxContainerHeigth: 600px;
   }
@@ -228,6 +271,7 @@ FIN DE MAPA DE CONTENIDOS */
     --section4TitleBackground: none;
     --section4Height: 800px;
 
+    /* PARALLAX BEHAVIOUR */
     --parallaxContainerWidth: 1200px;
     --parallaxContainerHeigth: 700px;
   }
@@ -241,6 +285,7 @@ FIN DE MAPA DE CONTENIDOS */
     --section4TitleBackground: none;
     --section4Height: 800px;
 
+    /* PARALLAX BEHAVIOUR */
     --parallaxContainerWidth: 1500px;
     --parallaxContainerHeigth: 800px;
 
@@ -323,8 +368,10 @@ FIN DE MAPA DE CONTENIDOS */
   display: grid;
   grid-template-columns: min-content auto;
   height: max-content;
-  margin: 150px auto auto 150px;
-  width: max-content;
+  /* margin: 150px auto auto 150px; */
+  margin:var(--copyContainerMargin);
+  padding:0 1rem;
+  /* width: max-content; */
 }
 
 .copyAndCTA {
@@ -359,6 +406,7 @@ FIN DE MAPA DE CONTENIDOS */
   transition: .25s;
   text-decoration: none;
   color: black;
+  white-space: nowrap;
 }
 
 .ButtonCTA:hover {
@@ -381,6 +429,7 @@ FIN DE MAPA DE CONTENIDOS */
   flex-direction: column;
   justify-content: center;
   height: min-content;
+  padding:0 .5rem;
 }
 
 .featureIcon {
@@ -411,6 +460,7 @@ FIN DE MAPA DE CONTENIDOS */
   width: 75%;
   margin-bottom: 3rem;
   justify-content: space-around;
+  flex-wrap:wrap;
 }
 
 .featureIcon1 {
@@ -433,6 +483,7 @@ FIN DE MAPA DE CONTENIDOS */
   background-size: cover;
   background-position: center;
   display: flex;
+  flex-direction:var(--metodologiasDirection);
   flex-wrap: wrap;
   height: 230px;
   justify-content: space-around;
@@ -468,7 +519,9 @@ FIN DE MAPA DE CONTENIDOS */
 }
 
 .metodologiasArrow{
+  display:var(--metodologiasArrowDisplay);
   height: 4rem;
+  padding:0 .8rem;
 }
 
 
@@ -511,7 +564,8 @@ FIN DE MAPA DE CONTENIDOS */
   justify-content: space-evenly;
   align-items: center;
   padding: var(--features2Padding);
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  flex-wrap: var(--features2FlexWrap);
 }
 
 
@@ -599,7 +653,8 @@ FIN DE MAPA DE CONTENIDOS */
   background: white;
   position: relative;
   z-index: 10;
-  height: calc(var(--parallaxContainerHeigth) - 70px);
+  /* height: calc(var(--parallaxContainerHeigth) - 70px); */
+  height: var(--section4Height);
   display: grid;
 }
 
@@ -608,7 +663,7 @@ FIN DE MAPA DE CONTENIDOS */
   height: var(--parallaxContainerHeigth);
   display: grid;
   grid-column: 1;
-  grid-row: 1;
+  grid-row: var(--parallaxContainerGR);
   margin-left: auto;
   margin-right: 2rem;
   margin-bottom: 0;
@@ -705,14 +760,17 @@ FIN DE MAPA DE CONTENIDOS */
 
 .section4Title {
   margin: auto;
-  margin-left: 4rem;
-  width: max-content;
+  /* margin-left: 4rem; */
+  /* width: max-content; */
   background: var(--section4TitleBackground);
+  padding:0 2rem;
+  text-align:var(--section4TitleTextAlign)
 }
 
 .section4Title h4 {
   font-weight: 300;
   font-size: 1.1rem;
+  white-space: normal;
 }
 
 .section4Title h5 {
@@ -809,7 +867,7 @@ margin-bottom: 1rem;
   grid-gap: .5rem;
   margin: auto;
   margin-bottom: 2rem;
-
+  padding:0 1rem;
 }
 
 .logoFooter {
