@@ -609,7 +609,8 @@ FIN DE MAPA DE CONTENIDOS */
   width: 75%;
   margin-bottom: 3rem;
   justify-content: space-around;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
+  font-weight: 100;
 }
 
 .featureIcon1 {
