@@ -114,15 +114,20 @@ FIN DE MAPA DE CONTENIDOS */
   --parallaxContainerHeigth: 420px;
   --parallaxScale:1.5;
 
-  --parallaxTxt1MT:-55px;
-  --parallaxTxt2MT:45px;
+  --parallaxTxt1MT:-15px;
+  --parallaxTxt2MT:25px;
   --parallaxTxt2MR:47%;
-  --parallaxTxt3MT:150px;
+  --parallaxTxt3MT:100px;
   --parallaxTxt3MR:12%;
-  --parallaxTxt4MT:202px;
+  --parallaxTxt4MT:142px;
   --parallaxTxt4MR:43%;
   --parallaxTxt6MT:360px;
   --parallaxTxt6MR:78%;
+
+  --moveManagerImg1MT:-40px;
+  --moveManagerImg2MT:45px;
+  --moveManagerImg3MT:122px;
+  --moveManagerImg4MT:155px;
 
 
 
@@ -193,15 +198,21 @@ FIN DE MAPA DE CONTENIDOS */
     --parallaxScale:1.5;
 
 
-    --parallaxTxt1MT:-42px;
-    --parallaxTxt2MT:40px;
+    --parallaxTxt1MT:-2px;
+    --parallaxTxt2MT:60px;
     --parallaxTxt2MR:52%;
-    --parallaxTxt3MT:140px;
-    --parallaxTxt3MR:12%;
+    --parallaxTxt3MT:205px;
+    --parallaxTxt3MR:-4%;
     --parallaxTxt4MT:195px;
     --parallaxTxt4MR:44%;
     --parallaxTxt6MT:420px;
     --parallaxTxt6MR:78%;
+
+    --moveManagerImg1MT:-40px;
+    --moveManagerImg2MT:85px;
+    --moveManagerImg3MT:172px;
+    --moveManagerImg4MT:215px;
+
   }
 }
 
@@ -274,6 +285,9 @@ FIN DE MAPA DE CONTENIDOS */
     --parallaxTxt4MR:37.5%;
     --parallaxTxt6MT:400px;
     --parallaxTxt6MR:55%;
+
+    --moveManagerImg1MT:-80px;
+    --moveManagerImg2MT:65px;
 
 
 
@@ -830,7 +844,8 @@ FIN DE MAPA DE CONTENIDOS */
 }
 
 .moveManagerImg1{
-  margin-top:-80px;
+  /* margin-top:-80px; */
+  margin-top:var(--moveManagerImg1MT);
   margin-right:7.2%;
   /* width: 29.3%; */
   width:calc(var(--parallaxScale) * 29.3%);
@@ -842,7 +857,8 @@ FIN DE MAPA DE CONTENIDOS */
 }
 
 .moveManagerImg2{
-  margin-top:65px;
+  /* margin-top:65px; */
+  margin-top:var(--moveManagerImg2MT);
   margin-right:28.5%;
   /* width: 24.9%; */
   width:calc(var(--parallaxScale) * 24.9%);
@@ -855,7 +871,8 @@ FIN DE MAPA DE CONTENIDOS */
 }
 
 .moveManagerImg3{
-  margin-top: 172px;
+  /* margin-top: 172px; */
+  margin-top: var(--moveManagerImg3MT);
   margin-right: 11%;
   /* width: 21%; */
   width:calc(var(--parallaxScale) * 21%);
@@ -868,7 +885,8 @@ FIN DE MAPA DE CONTENIDOS */
 }
 
 .moveManagerImg4{
-  margin-top: 215px;
+  /* margin-top: 215px; */
+  margin-top:var(--moveManagerImg4MT);
   margin-right: 42.5%;
   /* width: 19%; */
   width:calc(var(--parallaxScale) * 19%);
