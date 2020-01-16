@@ -83,6 +83,7 @@ FIN DE MAPA DE CONTENIDOS */
 
   /* ATF */
   --copyContainerMargin: auto;
+  --copyAndCTADisplay:flex;
 
 
   /* METODOLOGIAS */
@@ -252,6 +253,8 @@ FIN DE MAPA DE CONTENIDOS */
     --features2Padding: 1rem;
     --copyContainerGridTemplateCol: min-content 1fr;
     --iconoRelojMargin: calc(var(--sE) * 1px) 0 0 0;
+
+    --copyAndCTADisplay:inline;
 
     /* METODOLOGIAS */
     --metodologiasDirection: row;
@@ -514,6 +517,8 @@ FIN DE MAPA DE CONTENIDOS */
 
 .copyAndCTA {
   padding: 0 calc(var(--sE) * 1px);
+  display: var(--copyAndCTADisplay);
+  flex-direction: column;
 }
 
 .copy {
@@ -548,7 +553,9 @@ FIN DE MAPA DE CONTENIDOS */
 }
 
 .buttonCopy {
-  
+  margin: .8rem auto;
+  transform:scale(1.4);
+
 }
 
 .ButtonCTA:hover {
