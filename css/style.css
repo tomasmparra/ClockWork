@@ -72,6 +72,7 @@ FIN DE MAPA DE CONTENIDOS */
   --imgMovilWidth: auto;
   --imgMovilObjectFit: auto;
   --imgMovilMargin: auto auto 0 auto;
+  --copyContainerGridTemplateCol: 1fr;
 
   /* FEATURES 2 */
   --features2JustifyContent: space-between;
@@ -94,6 +95,9 @@ FIN DE MAPA DE CONTENIDOS */
   --stepsFontSize: 1.3rem;
   --imgMovilDisplay: block;
   --buttonsPolivalenciaFontSize: 1.1rem;
+  --singleFeaturePadding: 1rem;
+  --metodologiasArrowPadding: 1rem .8rem;
+  --iconoRelojMargin: auto;
 
   /* SECTION 3 */
   --section3GridTemplateColumns: 1fr;
@@ -104,6 +108,7 @@ FIN DE MAPA DE CONTENIDOS */
   /* SECTION 4 */
   --section4TitleTextAlign: center;
   --section4TitleBackground: rgba(255,255,255,.5);
+  --buttonCTA2Margin: auto;
 
   /* PARALLAX BEHAVIOUR */
 
@@ -184,7 +189,6 @@ FIN DE MAPA DE CONTENIDOS */
 
 
     /* SECTION 4 */
-    --section4TitleTextAlign: left;
 
     /* PARALLAX BEHAVIOUR */
     --parallaxContainerWidth: 500px;
@@ -235,6 +239,8 @@ FIN DE MAPA DE CONTENIDOS */
     --polivalenciaFlexWidth: 50%;
     --singleFeature2Width: 50%;
     --features2Padding: 1rem;
+    --copyContainerGridTemplateCol: min-content 1fr;
+    --iconoRelojMargin: calc(var(--sE) * 1px) 0 0 0;
 
     /* METODOLOGIAS */
     --metodologiasDirection: row;
@@ -244,15 +250,17 @@ FIN DE MAPA DE CONTENIDOS */
     --metodologiasTitleMarginBottom: 0;
     --stepsFontSize: 1rem;
     --buttonsPolivalenciaFontSize: ;
-
-
-    /* METODOLOGIAS */
     --imgMovilDisplay: block;
+    --metodologiasArrowPadding: 0 .8rem;
 
 
     /* SECTION 3 */
   --section3GridTemplateColumns: 1fr 1fr;
   --section3GridTemplateRows: 1fr;
+
+  /* SECTION 4 */
+  --section4TitleTextAlign: left;
+  --buttonCTA2Margin: auto auto auto 4rem;
 
 
     /* PARALLAX BEHAVIOUR */
@@ -325,6 +333,8 @@ FIN DE MAPA DE CONTENIDOS */
     --imgMovilWidth: auto;
     --imgMovilObjectFit: auto;
     --imgMovilMargin: auto;
+    --singleFeaturePadding: 0 .5rem;
+
 
     /* PARALLAX BEHAVIOUR */
     --parallaxContainerWidth: 900px;
@@ -480,7 +490,7 @@ FIN DE MAPA DE CONTENIDOS */
 
 .copyContainer {
   display: grid;
-  grid-template-columns: min-content auto;
+  grid-template-columns: var(--copyContainerGridTemplateCol);
   height: max-content;
   /* margin: 150px auto auto 150px; */
   margin:var(--copyContainerMargin);
@@ -505,7 +515,7 @@ FIN DE MAPA DE CONTENIDOS */
 
 .iconoReloj {
   height: 90px;
-  margin-top: calc(var(--sE) * 1px);
+  margin: var(--iconoRelojMargin);
   width: 90px;
 }
 
@@ -521,6 +531,10 @@ FIN DE MAPA DE CONTENIDOS */
   text-decoration: none;
   color: black;
   white-space: nowrap;
+}
+
+.buttonCopy {
+  
 }
 
 .ButtonCTA:hover {
@@ -543,7 +557,7 @@ FIN DE MAPA DE CONTENIDOS */
   flex-direction: column;
   justify-content: center;
   height: min-content;
-  padding:0 .5rem;
+  padding: var(--singleFeaturePadding);
 }
 
 .featureIcon {
@@ -592,7 +606,7 @@ FIN DE MAPA DE CONTENIDOS */
 }
 
 .metodologias {
-  background-image: url('../img/barcelonaVerde.png');
+  background-image: url('../img/barcelonaVerde.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -644,7 +658,7 @@ FIN DE MAPA DE CONTENIDOS */
 .metodologiasArrow{
   display:var(--metodologiasArrowDisplay);
   height: 4rem;
-  padding:0 .8rem;
+  padding: var(--metodologiasArrowPadding);
   transform: var(--metodologiasArrowTransform);
 }
 
@@ -726,7 +740,7 @@ FIN DE MAPA DE CONTENIDOS */
   display: flex;
   justify-content: var(--buttonsPolivalenciaJustifyContent);
   width: 100%;
-  background-image: url(../img/barcelonaVerde.png);
+  background-image: url(../img/barcelonaVerde.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -907,22 +921,21 @@ FIN DE MAPA DE CONTENIDOS */
 
 .section4Title {
   margin: auto;
-  /* margin-left: 4rem; */
-  /* width: max-content; */
   background: var(--section4TitleBackground);
   padding:0 2rem;
-  text-align:var(--section4TitleTextAlign)
 }
 
 .section4Title h4 {
   font-weight: 300;
   font-size: 1.1rem;
   white-space: normal;
+  text-align: var(--section4TitleTextAlign);
 }
 
 .section4Title h5 {
   font-size: 1rem;
   margin-top: 1.5rem;
+  text-align: var(--section4TitleTextAlign);
 }
 
 
@@ -937,7 +950,7 @@ FIN DE MAPA DE CONTENIDOS */
   color: white;
   font-weight: 300;
   font-size: .7rem;
-  margin-left: 4rem;
+  margin: var(--buttonCTA2Margin);
   text-decoration: none;
   transition: .25s;
 }
@@ -953,7 +966,6 @@ FIN DE MAPA DE CONTENIDOS */
 }
 
 .descargarCTA2:hover {
-  margin-top: 5rem;
   background: black;
   border: 1px solid white;
 }
