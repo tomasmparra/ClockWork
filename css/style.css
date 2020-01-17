@@ -299,7 +299,12 @@ FIN DE MAPA DE CONTENIDOS */
 
     --moveManagerImg1MT:-80px;
     --moveManagerImg2MT:65px;
+    --moveManagerImg3MT:172px;
+    --moveManagerImg4MT:215px;
 
+
+        /* --moveManagerImg1MT:-40px; */
+        /* --moveManagerImg2MT:85px; */
 
 
     /* FOOTER */
@@ -365,6 +370,11 @@ FIN DE MAPA DE CONTENIDOS */
     --parallaxTxt3MR:-1%;
     --parallaxTxt4MR:43%;
     --parallaxTxt6MT:450px;
+
+        --moveManagerImg1MT:-80px;
+        --moveManagerImg2MT:65px;
+        --moveManagerImg3MT:172px;
+        --moveManagerImg4MT:215px;
   }
 }
 
@@ -397,6 +407,11 @@ FIN DE MAPA DE CONTENIDOS */
     --parallaxTxt3MR:1.5%;
     --parallaxTxt4MR:47%;
     --parallaxTxt6MT:510px;
+
+        --moveManagerImg1MT:-80px;
+        --moveManagerImg2MT:65px;
+        --moveManagerImg3MT:172px;
+        --moveManagerImg4MT:215px;
   }
 }
 
@@ -415,6 +430,11 @@ FIN DE MAPA DE CONTENIDOS */
 
     --parallaxTxt3MR:2.5%;
     --parallaxTxt6MT:560px;
+
+        --moveManagerImg1MT:-80px;
+        --moveManagerImg2MT:65px;
+        --moveManagerImg3MT:172px;
+        --moveManagerImg4MT:215px;
   }
 }
 
