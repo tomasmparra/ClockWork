@@ -295,7 +295,7 @@ FIN DE MAPA DE CONTENIDOS */
     --parallaxTxt2MT:110px;
     --parallaxTxt2MR:17%;
     --parallaxTxt3MT:185px;
-    --parallaxTxt3MR:-2%;
+    --parallaxTxt3MR:-4%;
     --parallaxTxt4MT:220px;
     --parallaxTxt4MR:37.5%;
     --parallaxTxt6MT:400px;
@@ -440,10 +440,10 @@ FIN DE MAPA DE CONTENIDOS */
     --parallaxTxt3MR:2.5%;
     --parallaxTxt6MT:560px;
 
-        --moveManagerImg1MT:-80px;
+        /* --moveManagerImg1MT:-80px;
         --moveManagerImg2MT:65px;
         --moveManagerImg3MT:172px;
-        --moveManagerImg4MT:215px;
+        --moveManagerImg4MT:215px; */
   }
 }
 
