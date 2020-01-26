@@ -120,20 +120,22 @@ FIN DE MAPA DE CONTENIDOS */
   --parallaxContainerHeigth: 420px;
   --parallaxScale:1.5;
 
-  --parallaxTxt1MT:-15px;
-  --parallaxTxt2MT:25px;
+  --parallaxTxt1MT:75px;
+  --parallaxTxt2MT:85px;
   --parallaxTxt2MR:47%;
-  --parallaxTxt3MT:100px;
-  --parallaxTxt3MR:12%;
-  --parallaxTxt4MT:142px;
+  --parallaxTxt3MT:140px;
+  --parallaxTxt3MR:3%;
+  --parallaxTxt4MT:215px;
   --parallaxTxt4MR:43%;
+  --parallaxTxt5MT:240px;
+  --parallaxTxt5MR:15%;
   --parallaxTxt6MT:360px;
   --parallaxTxt6MR:78%;
 
-  --moveManagerImg1MT:-40px;
-  --moveManagerImg2MT:45px;
-  --moveManagerImg3MT:122px;
-  --moveManagerImg4MT:155px;
+  --moveManagerImg1MT:-10px;
+  --moveManagerImg2MT:95px;
+  --moveManagerImg3MT:162px;
+  --moveManagerImg4MT:225px;
 
 
 
@@ -198,25 +200,27 @@ FIN DE MAPA DE CONTENIDOS */
 
     /* PARALLAX BEHAVIOUR */
     --parallaxContainerWidth: 500px;
-    --parallaxContainerHeigth: 520px;
+    --parallaxContainerHeigth: 550px;
     /* --section4Height:calc(var(--parallaxContainerHeigth) - 70px); */
     --parallaxScale:1.5;
 
 
-    --parallaxTxt1MT:-2px;
-    --parallaxTxt2MT:60px;
+    --parallaxTxt1MT:105px;
+    --parallaxTxt2MT:120px;
     --parallaxTxt2MR:52%;
-    --parallaxTxt3MT:205px;
-    --parallaxTxt3MR:-4%;
-    --parallaxTxt4MT:195px;
+    --parallaxTxt3MT:255px;
+    --parallaxTxt3MR:-6%;
+    --parallaxTxt4MT:265px;
     --parallaxTxt4MR:44%;
+    --parallaxTxt5MT:320px;
+    --parallaxTxt5MR:0%;
     --parallaxTxt6MT:420px;
     --parallaxTxt6MR:78%;
 
     --moveManagerImg1MT:-40px;
-    --moveManagerImg2MT:85px;
-    --moveManagerImg3MT:172px;
-    --moveManagerImg4MT:215px;
+    --moveManagerImg2MT:125px;
+    --moveManagerImg3MT:192px;
+    --moveManagerImg4MT:275px;
 
   }
 }
@@ -287,18 +291,20 @@ FIN DE MAPA DE CONTENIDOS */
 
     --parallaxScale:1;
 
-    --parallaxTxt1MT:-45px;
-    --parallaxTxt2MT:40px;
-    --parallaxTxt2MR:41%;
-    --parallaxTxt3MT:195px;
-    --parallaxTxt3MR:-4%;
-    --parallaxTxt4MT:190px;
+    --parallaxTxt1MT:45px;
+    --parallaxTxt2MT:110px;
+    --parallaxTxt2MR:17%;
+    --parallaxTxt3MT:185px;
+    --parallaxTxt3MR:-2%;
+    --parallaxTxt4MT:220px;
     --parallaxTxt4MR:37.5%;
     --parallaxTxt6MT:400px;
     --parallaxTxt6MR:55%;
 
     --moveManagerImg1MT:-80px;
-    --moveManagerImg2MT:65px;
+    --moveManagerImg2MT:100px;
+    --moveManagerImg3MT:150px;
+    --moveManagerImg4MT:240px;
 
 
 
@@ -358,13 +364,21 @@ FIN DE MAPA DE CONTENIDOS */
     --parallaxContainerHeigth: 600px;
     --section4Height:calc(var(--parallaxContainerHeigth) - 70px);
 
-    --parallaxTxt1MT:-35px;
-    --parallaxTxt2MT:30px;
-    --parallaxTxt2MR:43.5%;
-    --parallaxTxt3MT:210px;
-    --parallaxTxt3MR:-1%;
+    --parallaxTxt1MT:110px;
+    --parallaxTxt2MT:110px;
+    --parallaxTxt2MR:45%;
+    --parallaxTxt3MT:227px;
+    --parallaxTxt3MR:.5%;
+    --parallaxTxt4MT:265px;
     --parallaxTxt4MR:43%;
+    --parallaxTxt5MT:320px;
+    --parallaxTxt5MR:3%;
     --parallaxTxt6MT:450px;
+
+    --moveManagerImg1MT:-60px;
+    --moveManagerImg2MT:110px;
+    --moveManagerImg3MT:150px;
+    --moveManagerImg4MT:280px;
   }
 }
 
@@ -391,12 +405,20 @@ FIN DE MAPA DE CONTENIDOS */
     --parallaxContainerHeigth: 650px;
     --section4Height:calc(var(--parallaxContainerHeigth) - 70px);
 
-    --parallaxTxt1MT:-19px;
+    --parallaxTxt1MT:90px;
+    --parallaxTxt2MT:70px;
     --parallaxTxt2MR:46%;
     --parallaxTxt3MT:230px;
     --parallaxTxt3MR:1.5%;
     --parallaxTxt4MR:47%;
+    --parallaxTxt5MT:350px;
+    --parallaxTxt5MR:6%;
     --parallaxTxt6MT:510px;
+
+    --moveManagerImg1MT:-140px;
+    --moveManagerImg2MT:70px;
+    --moveManagerImg3MT:150px;
+    --moveManagerImg4MT:280px;
   }
 }
 
@@ -854,6 +876,12 @@ FIN DE MAPA DE CONTENIDOS */
   grid-row: 1;
   margin: auto;
   margin-bottom: 0;
+  opacity:1;
+  transition:.4s;
+}
+.moveManagerPantallas.alt{
+  opacity:0;
+  transform:translateX(-50%);
 }
 
 .parallaxTxt {
@@ -928,8 +956,10 @@ FIN DE MAPA DE CONTENIDOS */
   width:calc(var(--parallaxScale) * 57%);
 }
 .parallaxTxt5 {
-  margin-top: 240px;
-  margin-right: 15%;
+  /* margin-top: 240px; */
+  margin-top:var(--parallaxTxt5MT);
+  /* margin-right: 15%; */
+  margin-right:var(--parallaxTxt5MR);
 }
 .parallaxTxt6 {
   /* margin-top: 560px; */
