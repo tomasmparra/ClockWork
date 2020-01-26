@@ -306,6 +306,8 @@ FIN DE MAPA DE CONTENIDOS */
     --moveManagerImg3MT:150px;
     --moveManagerImg4MT:240px;
 
+        /* --moveManagerImg1MT:-40px; */
+        /* --moveManagerImg2MT:85px; */
 
 
     /* FOOTER */
@@ -437,6 +439,11 @@ FIN DE MAPA DE CONTENIDOS */
 
     --parallaxTxt3MR:2.5%;
     --parallaxTxt6MT:560px;
+
+        --moveManagerImg1MT:-80px;
+        --moveManagerImg2MT:65px;
+        --moveManagerImg3MT:172px;
+        --moveManagerImg4MT:215px;
   }
 }
 
