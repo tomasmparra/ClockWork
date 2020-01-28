@@ -74,6 +74,7 @@ FIN DE MAPA DE CONTENIDOS */
   --imgMovilMargin: auto auto 0 auto;
   --copyContainerGridTemplateCol: 1fr;
 
+
   /* FEATURES 2 */
   --features2JustifyContent: space-between;
   --features2AlignSelf: ;
@@ -149,6 +150,7 @@ FIN DE MAPA DE CONTENIDOS */
   --footerRightMargin: 0;
   --footerRightPadding: 0;
   --footerGridGap: 1.5rem;
+  --footerElementMargin: auto;
 }
 
   /* ---------------------------------------------------------------------------
@@ -437,15 +439,10 @@ FIN DE MAPA DE CONTENIDOS */
     --parallaxContainerHeigth: 700px;
     --section4Height:calc(var(--parallaxContainerHeigth) - 70px);
 
-    --parallaxTxt3MR:2.5%;
-    --parallaxTxt6MT:560px;
 
-        /* --moveManagerImg1MT:-80px;
-        --moveManagerImg2MT:65px;
-        --moveManagerImg3MT:172px;
-        --moveManagerImg4MT:215px; */
   }
 }
+
 
 
 @media  screen and (min-width: 1600px) {
@@ -459,6 +456,27 @@ FIN DE MAPA DE CONTENIDOS */
     --parallaxContainerWidth: 1500px;
     --parallaxContainerHeigth: 770px;
     --section4Height:calc(var(--parallaxContainerHeigth) - 70px);
+
+
+    --parallaxTxt6MT:560px;
+
+    --parallaxTxt1MT: 147px;
+    --parallaxTxt2MT: 70px;
+    --parallaxTxt2MR: 46%;
+    --parallaxTxt3MT: 230px;
+    --parallaxTxt3MR: 4%;
+    --parallaxTxt4MR: 54%;
+    --parallaxTxt5MT: 400px;
+    --parallaxTxt5MR:7%;
+    --parallaxTxt6MT: 510px;
+
+    --moveManagerImg1MT: -140px;
+    --moveManagerImg2MT: 70px;
+    --moveManagerImg3MT: 170px;
+    --moveManagerImg4MT: 280px;
+
+    --footerRightMargin: 150px auto auto auto;
+    --footerElementMargin: 120px auto auto auto;
   }
 }
 
@@ -1060,7 +1078,7 @@ FIN DE MAPA DE CONTENIDOS */
 }
 
 .footerElement {
-  margin: auto;
+  margin: var(--footerElementMargin);
   color: white;
   font-weight: 300;
 }
