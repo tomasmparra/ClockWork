@@ -467,7 +467,7 @@ FIN DE MAPA DE CONTENIDOS */
     --parallaxTxt3MR: 4%;
     --parallaxTxt4MR: 54%;
     --parallaxTxt5MT: 400px;
-    --parallaxTxt5MR: 7.5%;
+    --parallaxTxt5MR:7%;
     --parallaxTxt6MT: 510px;
 
     --moveManagerImg1MT: -140px;
@@ -476,7 +476,7 @@ FIN DE MAPA DE CONTENIDOS */
     --moveManagerImg4MT: 280px;
 
     --footerRightMargin: 150px auto auto auto;
-    --footerElementMargin: 150px auto auto auto;
+    --footerElementMargin: 120px auto auto auto;
   }
 }
 
